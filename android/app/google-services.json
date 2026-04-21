@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "994535605546",
+    "project_id": "tarot-ai-app-58295",
+    "storage_bucket": "tarot-ai-app-58295.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994535605546:android:2b1996a7434fc5fc054a53",
+        "android_client_info": {
+          "package_name": "com.taowalker.divineguidance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994535605546-nndik2b8dre4nkrs1m4egsjbqvb76ctr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taowalker.divineguidance",
+            "certificate_hash": "b0ee8e573f4a0bc4ea5843a2ff71007e95ede3ab"
+          }
+        },
+        {
+          "client_id": "994535605546-tp7psunekl4rh04v9emn2vjvdsdjovmv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taowalker.divineguidance",
+            "certificate_hash": "1b42781f23e593105cba9381b00fa799ef817988"
+          }
+        },
+        {
+          "client_id": "994535605546-va9hemq9fgq6rckee1mj87bnfshu4ql6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taowalker.divineguidance",
+            "certificate_hash": "0757bfb5d3c0f8a877ae1c0ba4141f0530e19cff"
+          }
+        },
+        {
+          "client_id": "994535605546-7ipk276rl7cdotung418mca4fe5n9n80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAwKJ2qxFzgC9sjJGIEd0xfTOrpTfWmM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994535605546-7ipk276rl7cdotung418mca4fe5n9n80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

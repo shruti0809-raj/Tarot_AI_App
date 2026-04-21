@@ -1,0 +1,92 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+}
+
+android {
+    namespace = "com.taowalker.divineguidance"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion "26.1.10909125"
+    packaging {
+      jniLibs {
+        useLegacyPackaging = true
+        keepDebugSymbols += ["**/*.so"]
+      }
+    }
+    // 🔐 Load keystore properties (from android/key.properties)
+    def keystoreProperties = new Properties()
+    def keystorePropertiesFile = rootProject.file("key.properties")
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled = true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.taowalker.divineguidance"
+        minSdk 23
+        targetSdk = flutter.targetSdkVersion
+
+        // ⬆️ bump every Play upload
+        versionCode 25
+        versionName "1.0.2"
+        // ✅ Keep only these Android resources (shrink APK/AAB)
+        resConfigs "en"      // add more like: "en", "hi", "fr"
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                keyAlias keystoreProperties["keyAlias"]
+                keyPassword keystoreProperties["keyPassword"]
+                storeFile file(keystoreProperties["storeFile"]) // resolves in :app/
+                storePassword keystoreProperties["storePassword"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // ✅ SIGN WITH YOUR RELEASE KEY (not debug)
+            signingConfig = signingConfigs.release
+
+            // Optional size/obfuscation:
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            ndk { debugSymbolLevel 'NONE' }  
+        }
+        debug {
+            // stays debug-signed automatically
+        }
+    }
+}
+
+// Hard-disable all native strip tasks (Windows-friendly)
+gradle.projectsEvaluated {
+    tasks.matching { t ->
+        t.name.toLowerCase().contains("strip") && t.name.toLowerCase().contains("symbol")
+    }.configureEach { t ->
+        t.enabled = false
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    implementation 'com.google.android.play:integrity:1.5.0'
+}

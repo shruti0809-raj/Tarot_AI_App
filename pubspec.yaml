@@ -1,0 +1,99 @@
+name: divine_guidance_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.17.4
+  cloud_firestore: ^4.12.0
+  http: ^0.13.6
+  intl: ^0.18.1
+  url_launcher: ^6.2.5
+  open_filex: ^4.3.2
+  cloud_functions: ^4.6.5
+  google_sign_in: ^6.1.6
+  connectivity_plus: ^6.0.3
+  intl_phone_field: ^3.2.0 
+  path_provider: ^2.1.4
+  libphonenumber_plugin: ^0.3.3
+  image_picker: ^1.0.4
+  shared_preferences: ^2.2.2
+  share_plus: ^7.2.1
+  flutter_local_notifications: ^17.1.2
+  timezone: ^0.9.2
+  permission_handler: ^11.0.0
+  shimmer: ^3.0.0
+  android_intent_plus: ^4.0.2
+  font_awesome_flutter: ^10.5.0
+  in_app_purchase: ^3.2.3
+  in_app_purchase_android: ^0.4.0
+  device_info_plus: ^10.1.0
+  file_picker: ^8.0.0
+  firebase_storage: ^11.7.0
+
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  pdf: ^3.10.7
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel-Regular.ttf
+        - asset: assets/fonts/Cinzel-Bold.ttf
+          weight: 700
+    - family: PlayfairDisplay
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+        - asset: assets/fonts/PlayfairDisplay-Italic.ttf
+          style: italic
+        - asset: assets/fonts/PlayfairDisplay-Bold.ttf
+          weight: 700
+  assets:
+    - assets/video/
+    - assets/cards/
+    - assets/design/
+    - assets/icons/
+    - assets/cards/tarot/
+    - assets/cards/oracle/
+    - assets/cards/messages/
+    - assets/cards/affirmations/
+    - assets/cards/charms/
+    - assets/design/background1.jpg
+    - assets/design/background2.jpg
+    - assets/design/background3.jpg
+    - assets/design/welcome_screen1.jpg
+    - assets/design/bg_layer1.jpg
+    - assets/icons/star_small.png
+    - assets/icons/star_medium.png
+    - assets/icons/star_large.png
+    - assets/icons/moon.png
+    - assets/icons/moonstar.png
+    - assets/icons/eye.png
+    - assets/icons/evileye.png
+    - assets/icons/planet.png
+    - assets/icons/feather.png
+    - assets/icons/constellation.png
+    - assets/card_meanings.json
+    - assets/profile_placeholder.png
+    - assets/logo/watermark.png
+    - assets/logo/logo.png
+    - assets/badges/google_play_badge.png
+    - assets/backgrounds/bg_angel.png
+    - assets/backgrounds/bg_love.png
+    - assets/backgrounds/bg_career.png
+    - assets/backgrounds/bg_fullmoon.png
+    - assets/backgrounds/bg_personal.png
+    - assets/backgrounds/bg_sunsign.png
